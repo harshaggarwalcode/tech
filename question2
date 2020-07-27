@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+#define Int_max -214748647
+#define Int_min 214748647
+
+void secondnumber(int a[],int size)
+{
+  int max=Int_max;
+  int min=Int_min;
+  int smin=Int_min;
+  int smax=Int_max;
+  for(int i=0;i<size;i++)
+  {
+	if(arr[i]<min)
+	{
+	  min=arr[i];
+	}
+  }
+    for(int i=0;i<size;i++)
+    {
+	if(arr[i]<smin &&arr[i]>min)
+	{
+	   smin=arr[i];
+	}
+     }
+   for(int i=0;i<size;i++)
+   {
+	if(arr[i]>max)
+        {
+	  max=arr[i];
+        }
+   }	
+   cout<<max;
+  for(int i=0;i<size;i++)
+  {
+	if(arr[i]>smax && arr[i]<max)
+        {
+	    smax=arr[i];
+	}
+  }
+   cout<<"2nd max element"<<smax<<endl;
+   cout<<"2nd min element"<<smin<<endl;
+}
+int main()
+{
+cout<<"please enter the size of the array"<<endl;
+int size,array[size];
+cin>>size;
+cout<<"enter array element"<<endl;
+for(int i=0;i<size;i++)
+{
+cin>>array[i];
+}
+secondnumber(array,size);
+return 0;
+}
+
