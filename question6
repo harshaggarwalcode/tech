@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void findprime(int n)
+{
+int count;
+for(int i=2;i<n;i++)
+{
+ if(n%i==0)
+ {
+  count++;
+ }
+}
+if(!count)
+{
+  cout<<"it is prime";
+}
+else
+{
+  cout<<"no it is not prime";
+}
+}
+int main()
+{
+int n;
+cin>>n;
+findprime(n);
+return 0;
+}
